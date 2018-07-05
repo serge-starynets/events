@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'concerts-app',
+  selector: 'events-app',
   template: `
   <nav-bar></nav-bar>
-  <concerts-list></concerts-list>
+  <events-list></events-list>
   `
 })
-export class ConcertsAppComponent {
+export class EventsAppComponent {
   title = 'app';
 }
