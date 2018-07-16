@@ -15,6 +15,7 @@ import { NavBarComponent } from './nav/navbar.component';
 import { Error404Component } from './errors/404.component';
 
 import { ToastrService } from './common/toastr.service';
+import { AuthService } from './user/auth.service';
 
 import { appRoutes } from './routes';
 
@@ -32,7 +33,13 @@ import { appRoutes } from './routes';
     BrowserModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [EventService, ToastrService, EventRouteActivator, {provide: 'canDeactivateCreateEvent', useValue: CheckDirtyState}, EventListResolver],
+  providers: [
+    EventService, 
+    ToastrService, 
+    EventRouteActivator, 
+    {provide: 'canDeactivateCreateEvent', useValue: CheckDirtyState}, 
+    EventListResolver, 
+    AuthService],
   bootstrap: [EventsAppComponent]
 })
 export class AppModule { }
