@@ -8,6 +8,7 @@ import { EventsListComponent,
          EventService, 
          EventDetailsComponent, 
          CreateEventComponent,
+         CreateSessionComponent,
          EventRouteActivator,
          EventListResolver } from './events/index';
 
@@ -28,6 +29,7 @@ import { appRoutes } from './routes';
     NavBarComponent,
     EventDetailsComponent,
     CreateEventComponent,
+    CreateSessionComponent,
     Error404Component
   ],
   imports: [
