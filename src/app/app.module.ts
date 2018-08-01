@@ -9,6 +9,7 @@ import { EventsListComponent,
          EventDetailsComponent, 
          CreateEventComponent,
          CreateSessionComponent,
+         SessionListComponent,
          EventRouteActivator,
          EventListResolver } from './events/index';
 
@@ -17,6 +18,7 @@ import { NavBarComponent } from './nav/navbar.component';
 import { Error404Component } from './errors/404.component';
 
 import { ToastrService } from './common/toastr.service';
+import { CollapsibleWellComponent } from './common/collapsible-well.component';
 import { AuthService } from './user/auth.service';
 
 import { appRoutes } from './routes';
@@ -30,7 +32,9 @@ import { appRoutes } from './routes';
     EventDetailsComponent,
     CreateEventComponent,
     CreateSessionComponent,
-    Error404Component
+    SessionListComponent,
+    Error404Component,
+    CollapsibleWellComponent
   ],
   imports: [
     BrowserModule,
