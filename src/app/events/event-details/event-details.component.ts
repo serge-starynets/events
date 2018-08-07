@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { EventService } from '../shared/event.service';
 import { ActivatedRoute } from '@angular/router';
 import { IEvent, ISession, restrictedWords } from '../shared/index';
@@ -8,13 +8,15 @@ import { IEvent, ISession, restrictedWords } from '../shared/index';
     styles: [`
     .container: { padding-left: 20px; padding-right:20px; }
     .event-image: { height: 100px; }
-    a { cursor:pointer; float: right; }
+    a { cursor:pointer; }
     `]
 })
 
-export class EventDetailsComponent {
+export class EventDetailsComponent implements OnInit {
     event: IEvent;
     addMode: boolean;
+    filterBy: string = 'all';
+    sortBy: string = 'votes';
 
     constructor(private eventService: EventService, private route: ActivatedRoute){
 

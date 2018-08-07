@@ -11,7 +11,8 @@ import { EventsListComponent,
          CreateSessionComponent,
          SessionListComponent,
          EventRouteActivator,
-         EventListResolver } from './events/index';
+         EventListResolver,
+         DurationPipe } from './events/index';
 
 import { EventsAppComponent } from './events-app.component';
 import { NavBarComponent } from './nav/navbar.component';
@@ -34,7 +35,8 @@ import { appRoutes } from './routes';
     CreateSessionComponent,
     SessionListComponent,
     Error404Component,
-    CollapsibleWellComponent
+    CollapsibleWellComponent,
+    DurationPipe
   ],
   imports: [
     BrowserModule,
